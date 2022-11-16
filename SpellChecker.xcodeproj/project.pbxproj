@@ -22,10 +22,10 @@
 		24BC7E7D2924E0120023FE89 /* SpellListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E7A2924E0120023FE89 /* SpellListItem.swift */; };
 		24BC7E822924FE820023FE89 /* CharacterClassListMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E812924FE820023FE89 /* CharacterClassListMapper.swift */; };
 		24BC7E862925083C0023FE89 /* SpellListMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E852925083C0023FE89 /* SpellListMapper.swift */; };
-		24BC7E8829250BFC0023FE89 /* SpellCheckerFeatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E8729250BFC0023FE89 /* SpellCheckerFeatureTests.swift */; };
 		24BC7E8B292511CC0023FE89 /* RemoteAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E8A292511CC0023FE89 /* RemoteAPI.swift */; };
 		24BC7E8D29254A060023FE89 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E8C29254A060023FE89 /* HTTPClient.swift */; };
 		24BC7E8F29254C580023FE89 /* DefaultHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E8E29254C580023FE89 /* DefaultHTTPClient.swift */; };
+		24BC7E91292558B10023FE89 /* CharacterClassListFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E90292558B10023FE89 /* CharacterClassListFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,10 +65,10 @@
 		24BC7E7A2924E0120023FE89 /* SpellListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellListItem.swift; sourceTree = "<group>"; };
 		24BC7E812924FE820023FE89 /* CharacterClassListMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClassListMapper.swift; sourceTree = "<group>"; };
 		24BC7E852925083C0023FE89 /* SpellListMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellListMapper.swift; sourceTree = "<group>"; };
-		24BC7E8729250BFC0023FE89 /* SpellCheckerFeatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellCheckerFeatureTests.swift; sourceTree = "<group>"; };
 		24BC7E8A292511CC0023FE89 /* RemoteAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAPI.swift; sourceTree = "<group>"; };
 		24BC7E8C29254A060023FE89 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		24BC7E8E29254C580023FE89 /* DefaultHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHTTPClient.swift; sourceTree = "<group>"; };
+		24BC7E90292558B10023FE89 /* CharacterClassListFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClassListFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				24BC7E552924CE440023FE89 /* SpellCheckerTests.swift */,
-				24BC7E8729250BFC0023FE89 /* SpellCheckerFeatureTests.swift */,
 			);
 			path = SpellCheckerTests;
 			sourceTree = "<group>";
@@ -192,6 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				24BC7E742924D6960023FE89 /* Coordinator.swift */,
+				24BC7E8C29254A060023FE89 /* HTTPClient.swift */,
+				24BC7E8E29254C580023FE89 /* DefaultHTTPClient.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -200,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				24BC7E812924FE820023FE89 /* CharacterClassListMapper.swift */,
+				24BC7E90292558B10023FE89 /* CharacterClassListFeature.swift */,
 			);
 			path = CharacterClassList;
 			sourceTree = "<group>";
@@ -223,8 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				24BC7E8A292511CC0023FE89 /* RemoteAPI.swift */,
-				24BC7E8C29254A060023FE89 /* HTTPClient.swift */,
-				24BC7E8E29254C580023FE89 /* DefaultHTTPClient.swift */,
 			);
 			path = DataSources;
 			sourceTree = "<group>";
@@ -364,6 +364,7 @@
 				24BC7E8D29254A060023FE89 /* HTTPClient.swift in Sources */,
 				24BC7E822924FE820023FE89 /* CharacterClassListMapper.swift in Sources */,
 				24BC7E752924D6960023FE89 /* Coordinator.swift in Sources */,
+				24BC7E91292558B10023FE89 /* CharacterClassListFeature.swift in Sources */,
 				24BC7E432924CE420023FE89 /* CharacterClassListViewController.swift in Sources */,
 				24BC7E862925083C0023FE89 /* SpellListMapper.swift in Sources */,
 				24BC7E7B2924E0120023FE89 /* Spell.swift in Sources */,
@@ -380,7 +381,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				24BC7E562924CE440023FE89 /* SpellCheckerTests.swift in Sources */,
-				24BC7E8829250BFC0023FE89 /* SpellCheckerFeatureTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
