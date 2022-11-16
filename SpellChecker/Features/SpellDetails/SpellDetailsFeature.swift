@@ -1,5 +1,5 @@
 //
-//  SpellListFeature.swift
+//  SpellDetailsFeature.swift
 //  SpellChecker
 //
 //  Created by Mat Cegiela on 11/16/22.
@@ -7,35 +7,30 @@
 
 import Foundation
 
-class SpellListFeature {
+class SpellDetailsFeature {
     
     enum LoadError: Error {
         case requestFailed, invalidData
     }
     
-    init(api: RemoteAPI,
-         client: HTTPClient,
-         mapper: SpellListMapper) {
+    init(api: RemoteAPI, client: HTTPClient) {
         self.api = api
         self.client = client
-        self.mapper = mapper
     }
     
-    typealias LoadResult = Result<[SpellListItem], LoadError>
+    typealias LoadResult = Result<Spell, LoadError>
     
-    func loadList(characterClassIdentifier: String, completion: @escaping (LoadResult) -> Void) {
-        let url = api.getSpellListURL(characterClassIdentifier: characterClassIdentifier)
+    func loadSpell(spellIdentifier: String, completion: @escaping (LoadResult) -> Void) {
+        let url = api.getSpellDetailsURL(spellIdentifier: spellIdentifier)
         
-        client.getRequest(url: url) { [weak self] result in
-            guard let self else { return }
-            
+        client.getRequest(url: url) { result in
             switch result {
             case .failure(let error):
                 print(error)
                 completion(.failure(.requestFailed))
             case .success(let data):
                 do {
-                    let list = try self.mapper.map(data: data)
+                    let list = try JSONDecoder().decode(Spell.self, from: data)
                     completion(.success(list))
                 } catch let error {
                     print(error)
@@ -49,12 +44,11 @@ class SpellListFeature {
     
     private let api: RemoteAPI
     private let client: HTTPClient
-    private let mapper: SpellListMapper
 }
 
 extension RemoteAPI {
-    func getSpellListURL(characterClassIdentifier: String) -> URL {
-        let path = "/classes/\(characterClassIdentifier)/spells"
+    func getSpellDetailsURL(spellIdentifier: String) -> URL {
+        let path = "/spells/\(spellIdentifier)"
         return urlWithPath(path)!
     }
 }

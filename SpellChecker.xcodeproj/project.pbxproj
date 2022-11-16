@@ -30,6 +30,7 @@
 		24BC7E95292583BB0023FE89 /* SpellListFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E94292583BB0023FE89 /* SpellListFeature.swift */; };
 		24BC7E97292586930023FE89 /* SpellListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E96292586920023FE89 /* SpellListViewModel.swift */; };
 		24BC7E99292592070023FE89 /* Observed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E98292592070023FE89 /* Observed.swift */; };
+		24BC7E9B292597B70023FE89 /* SpellDetailsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E9A292597B70023FE89 /* SpellDetailsFeature.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		24BC7E94292583BB0023FE89 /* SpellListFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellListFeature.swift; sourceTree = "<group>"; };
 		24BC7E96292586920023FE89 /* SpellListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellListViewModel.swift; sourceTree = "<group>"; };
 		24BC7E98292592070023FE89 /* Observed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observed.swift; sourceTree = "<group>"; };
+		24BC7E9A292597B70023FE89 /* SpellDetailsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellDetailsFeature.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 		24BC7E802924E1910023FE89 /* SpellDetails */ = {
 			isa = PBXGroup;
 			children = (
+				24BC7E9A292597B70023FE89 /* SpellDetailsFeature.swift */,
 			);
 			path = SpellDetails;
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				24BC7E822924FE820023FE89 /* CharacterClassListMapper.swift in Sources */,
 				24BC7E97292586930023FE89 /* SpellListViewModel.swift in Sources */,
 				24BC7E752924D6960023FE89 /* Coordinator.swift in Sources */,
+				24BC7E9B292597B70023FE89 /* SpellDetailsFeature.swift in Sources */,
 				24BC7E91292558B10023FE89 /* CharacterClassListFeature.swift in Sources */,
 				24BC7E432924CE420023FE89 /* CharacterClassListViewController.swift in Sources */,
 				24BC7E862925083C0023FE89 /* SpellListMapper.swift in Sources */,

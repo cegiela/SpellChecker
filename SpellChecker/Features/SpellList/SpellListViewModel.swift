@@ -34,7 +34,7 @@ class SpellListViewModel {
     var characterClassItem: CharacterClassListViewModel.ContentItem? {
         didSet {
             if let identifier = characterClassItem?.identifier {
-                loadList(characterClass: identifier)
+                loadList(characterClassIdentifier: identifier)
             } else {
                 state.value = .empty(message: "Nothing to show yet")
             }
@@ -50,8 +50,8 @@ class SpellListViewModel {
     
     private let feature: SpellListFeature
     
-    private func loadList(characterClass: String) {
-        feature.loadList(characterClass: characterClass) { [weak self] result in
+    private func loadList(characterClassIdentifier: String) {
+        feature.loadList(characterClassIdentifier: characterClassIdentifier) { [weak self] result in
             
             DispatchQueue.main.async {
                 switch result {
