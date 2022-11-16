@@ -29,21 +29,21 @@ class SpellListViewModel {
         }
     }
     
-    private(set) var state: State
+    private(set) var state: Observed<State>
     
-    var characterClassItem: CharacterClassListItem? {
+    var characterClassItem: CharacterClassListViewModel.ContentItem? {
         didSet {
-            if let identifier = characterClassItem?.index {
+            if let identifier = characterClassItem?.identifier {
                 loadList(characterClass: identifier)
             } else {
-                state = .empty(message: "Nothing to show yet")
+                state.value = .empty(message: "Nothing to show yet")
             }
         }
     }
     
     init(feature: SpellListFeature) {
         self.feature = feature
-        self.state = .loading
+        self.state = Observed(State.loading)
     }
     
     //MARK: - Private
@@ -65,15 +65,15 @@ class SpellListViewModel {
     }
     
     private func updateWithError(_ error: SpellListFeature.LoadError) {
-        state = .failed(message: "Something went wrong, content failed to load")
+        state.value = .failed(message: "Something went wrong, content failed to load")
     }
     
     private func updateWithItems(_ items: [SpellListItem]) {
         if items.isEmpty {
-            state = .empty(message: "There is no content available right now")
+            state.value = .empty(message: "There is no content available right now")
         } else {
             let contentItems = items.map { ContentItem(name: $0.name, identifier: $0.index)}
-            state = .ready(items: contentItems)
+            state.value = .ready(items: contentItems)
         }
     }
 }

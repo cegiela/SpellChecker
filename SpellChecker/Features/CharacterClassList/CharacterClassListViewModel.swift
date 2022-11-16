@@ -22,11 +22,11 @@ class CharacterClassListViewModel {
     }
     
     let viewTitle = "D&D Character Classes"
-    private(set) var state: State
+    private(set) var state: Observed<State>
 
     init(feature: CharacterClassListFeature) {
         self.feature = feature
-        self.state = .loading
+        self.state = Observed(State.loading)
         
         loadList()
     }
@@ -50,15 +50,15 @@ class CharacterClassListViewModel {
     }
     
     private func updateWithError(_ error: CharacterClassListFeature.LoadError) {
-        state = .failed(message: "Something went wrong, content failed to load")
+        state.value = .failed(message: "Something went wrong, content failed to load")
     }
     
     private func updateWithItems(_ items: [CharacterClassListItem]) {
         if items.isEmpty {
-            state = .empty(message: "There is no content available right now")
+            state.value = .empty(message: "There is no content available right now")
         } else {
             let contentItems = items.map { ContentItem(name: $0.name, identifier: $0.index)}
-            state = .ready(items: contentItems)
+            state.value = .ready(items: contentItems)
         }
     }
 }

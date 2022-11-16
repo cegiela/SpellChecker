@@ -29,6 +29,7 @@
 		24BC7E93292562710023FE89 /* CharacterClassListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E92292562710023FE89 /* CharacterClassListViewModel.swift */; };
 		24BC7E95292583BB0023FE89 /* SpellListFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E94292583BB0023FE89 /* SpellListFeature.swift */; };
 		24BC7E97292586930023FE89 /* SpellListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E96292586920023FE89 /* SpellListViewModel.swift */; };
+		24BC7E99292592070023FE89 /* Observed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E98292592070023FE89 /* Observed.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		24BC7E92292562710023FE89 /* CharacterClassListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClassListViewModel.swift; sourceTree = "<group>"; };
 		24BC7E94292583BB0023FE89 /* SpellListFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellListFeature.swift; sourceTree = "<group>"; };
 		24BC7E96292586920023FE89 /* SpellListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellListViewModel.swift; sourceTree = "<group>"; };
+		24BC7E98292592070023FE89 /* Observed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observed.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 				24BC7E742924D6960023FE89 /* Coordinator.swift */,
 				24BC7E8C29254A060023FE89 /* HTTPClient.swift */,
 				24BC7E8E29254C580023FE89 /* DefaultHTTPClient.swift */,
+				24BC7E98292592070023FE89 /* Observed.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				24BC7E7C2924E0120023FE89 /* CharacterClassListItem.swift in Sources */,
+				24BC7E99292592070023FE89 /* Observed.swift in Sources */,
 				24BC7E7D2924E0120023FE89 /* SpellListItem.swift in Sources */,
 				24BC7E8D29254A060023FE89 /* HTTPClient.swift in Sources */,
 				24BC7E822924FE820023FE89 /* CharacterClassListMapper.swift in Sources */,
