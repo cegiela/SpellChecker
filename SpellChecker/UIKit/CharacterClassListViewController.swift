@@ -11,7 +11,9 @@ class CharacterClassListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        navigationItem.title = "Class"
+        navigationItem.largeTitleDisplayMode = .automatic
+        view.backgroundColor = .systemBackground
     }
 }
-
