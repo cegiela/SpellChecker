@@ -12,6 +12,7 @@ struct CharacterClassListItem: Codable {
 }
 
 struct MockCharacterClassList {
+    let count = 12
     let jsonString = """
 {
   "count": 12,

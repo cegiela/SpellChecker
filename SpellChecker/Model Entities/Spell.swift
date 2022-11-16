@@ -28,7 +28,8 @@ struct Spell: Codable {
     enum CodingKeys: String, CodingKey {
         case id = "_id"
         case higherLevelDescriptions = "higher_level"
-        case index, name, descriptions, range, components, ritual, duration, concentration
+        case descriptions = "desc"
+        case index, name, range, components, ritual, duration, concentration
         case castingTime = "casting_time"
         case attackType = "attack_type"
         case level, damage, school, classes, subclasses, url
@@ -54,6 +55,7 @@ struct DamageType: Codable {
 }
 
 struct MockSpell {
+    let name = "Produce Flame"
     let jsonString = """
 {
   "_id": "63620c73a353df629003ddfd",

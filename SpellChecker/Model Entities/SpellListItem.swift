@@ -12,6 +12,7 @@ struct SpellListItem: Codable {
 }
 
 struct MockSpellList {
+    let count = 104
     let jsonString = """
 {
   "count": 104,
