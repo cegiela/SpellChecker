@@ -28,6 +28,7 @@
 		24BC7E91292558B10023FE89 /* CharacterClassListFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E90292558B10023FE89 /* CharacterClassListFeature.swift */; };
 		24BC7E93292562710023FE89 /* CharacterClassListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E92292562710023FE89 /* CharacterClassListViewModel.swift */; };
 		24BC7E95292583BB0023FE89 /* SpellListFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E94292583BB0023FE89 /* SpellListFeature.swift */; };
+		24BC7E97292586930023FE89 /* SpellListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E96292586920023FE89 /* SpellListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		24BC7E90292558B10023FE89 /* CharacterClassListFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClassListFeature.swift; sourceTree = "<group>"; };
 		24BC7E92292562710023FE89 /* CharacterClassListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClassListViewModel.swift; sourceTree = "<group>"; };
 		24BC7E94292583BB0023FE89 /* SpellListFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellListFeature.swift; sourceTree = "<group>"; };
+		24BC7E96292586920023FE89 /* SpellListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +218,7 @@
 			children = (
 				24BC7E852925083C0023FE89 /* SpellListMapper.swift */,
 				24BC7E94292583BB0023FE89 /* SpellListFeature.swift */,
+				24BC7E96292586920023FE89 /* SpellListViewModel.swift */,
 			);
 			path = SpellList;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				24BC7E7D2924E0120023FE89 /* SpellListItem.swift in Sources */,
 				24BC7E8D29254A060023FE89 /* HTTPClient.swift in Sources */,
 				24BC7E822924FE820023FE89 /* CharacterClassListMapper.swift in Sources */,
+				24BC7E97292586930023FE89 /* SpellListViewModel.swift in Sources */,
 				24BC7E752924D6960023FE89 /* Coordinator.swift in Sources */,
 				24BC7E91292558B10023FE89 /* CharacterClassListFeature.swift in Sources */,
 				24BC7E432924CE420023FE89 /* CharacterClassListViewController.swift in Sources */,

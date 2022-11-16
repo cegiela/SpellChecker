@@ -9,7 +9,7 @@ import Foundation
 
 class CharacterClassListFeature {
     
-    enum LoadingError: Error {
+    enum LoadError: Error {
         case requestFailed, invalidData
     }
     
@@ -21,7 +21,7 @@ class CharacterClassListFeature {
         self.mapper = mapper
     }
     
-    typealias LoadResult = Result<[CharacterClassListItem], LoadingError>
+    typealias LoadResult = Result<[CharacterClassListItem], LoadError>
     
     func loadList(completion: @escaping (LoadResult) -> Void) {
         let url = api.getCharacterClassListURL

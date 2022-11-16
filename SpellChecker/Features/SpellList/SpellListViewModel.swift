@@ -1,5 +1,5 @@
 //
-//  CharacterClassListViewModel.swift
+//  SpellListViewModel.swift
 //  SpellChecker
 //
 //  Created by Mat Cegiela on 11/16/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class CharacterClassListViewModel {
+class SpellListViewModel {
     
     struct ContentItem {
         let name: String
@@ -21,22 +21,37 @@ class CharacterClassListViewModel {
         case failed(message: String)
     }
     
-    let viewTitle = "D&D Character Classes"
+    var viewTitle: String {
+        if let className = characterClassItem?.name {
+            return "\(className) Spells"
+        } else {
+            return "Spell List"
+        }
+    }
+    
     private(set) var state: State
-
-    init(feature: CharacterClassListFeature) {
+    
+    var characterClassItem: CharacterClassListItem? {
+        didSet {
+            if let identifier = characterClassItem?.index {
+                loadList(characterClass: identifier)
+            } else {
+                state = .empty(message: "Nothing to show yet")
+            }
+        }
+    }
+    
+    init(feature: SpellListFeature) {
         self.feature = feature
         self.state = .loading
-        
-        loadList()
     }
     
     //MARK: - Private
     
-    private let feature: CharacterClassListFeature
+    private let feature: SpellListFeature
     
-    private func loadList() {
-        feature.loadList { [weak self] result in
+    private func loadList(characterClass: String) {
+        feature.loadList(characterClass: characterClass) { [weak self] result in
             
             DispatchQueue.main.async {
                 switch result {
@@ -49,11 +64,11 @@ class CharacterClassListViewModel {
         }
     }
     
-    private func updateWithError(_ error: CharacterClassListFeature.LoadError) {
+    private func updateWithError(_ error: SpellListFeature.LoadError) {
         state = .failed(message: "Something went wrong, content failed to load")
     }
     
-    private func updateWithItems(_ items: [CharacterClassListItem]) {
+    private func updateWithItems(_ items: [SpellListItem]) {
         if items.isEmpty {
             state = .empty(message: "There is no content available right now")
         } else {
