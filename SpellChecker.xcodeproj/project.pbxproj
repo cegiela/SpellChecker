@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		24BC7E3F2924CE420023FE89 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E3E2924CE420023FE89 /* AppDelegate.swift */; };
 		24BC7E412924CE420023FE89 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E402924CE420023FE89 /* SceneDelegate.swift */; };
-		24BC7E432924CE420023FE89 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E422924CE420023FE89 /* ViewController.swift */; };
+		24BC7E432924CE420023FE89 /* CharacterClassListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E422924CE420023FE89 /* CharacterClassListViewController.swift */; };
 		24BC7E482924CE430023FE89 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24BC7E472924CE430023FE89 /* Assets.xcassets */; };
 		24BC7E4B2924CE430023FE89 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24BC7E492924CE430023FE89 /* LaunchScreen.storyboard */; };
 		24BC7E562924CE440023FE89 /* SpellCheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E552924CE440023FE89 /* SpellCheckerTests.swift */; };
@@ -38,7 +38,7 @@
 		24BC7E3B2924CE420023FE89 /* SpellChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpellChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24BC7E3E2924CE420023FE89 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24BC7E402924CE420023FE89 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		24BC7E422924CE420023FE89 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		24BC7E422924CE420023FE89 /* CharacterClassListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClassListViewController.swift; sourceTree = "<group>"; };
 		24BC7E472924CE430023FE89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24BC7E4A2924CE430023FE89 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24BC7E4C2924CE430023FE89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,11 +97,11 @@
 		24BC7E3D2924CE420023FE89 /* SpellChecker */ = {
 			isa = PBXGroup;
 			children = (
-				24BC7E3E2924CE420023FE89 /* AppDelegate.swift */,
-				24BC7E402924CE420023FE89 /* SceneDelegate.swift */,
-				24BC7E422924CE420023FE89 /* ViewController.swift */,
+				24BC7E6E2924D21E0023FE89 /* App Root */,
+				24BC7E6F2924D2370023FE89 /* Model Entities */,
+				24BC7E712924D2960023FE89 /* Features */,
+				24BC7E722924D4270023FE89 /* UIKit */,
 				24BC7E472924CE430023FE89 /* Assets.xcassets */,
-				24BC7E492924CE430023FE89 /* LaunchScreen.storyboard */,
 				24BC7E4C2924CE430023FE89 /* Info.plist */,
 			);
 			path = SpellChecker;
@@ -122,6 +122,38 @@
 				24BC7E612924CE440023FE89 /* SpellCheckerUITestsLaunchTests.swift */,
 			);
 			path = SpellCheckerUITests;
+			sourceTree = "<group>";
+		};
+		24BC7E6E2924D21E0023FE89 /* App Root */ = {
+			isa = PBXGroup;
+			children = (
+				24BC7E492924CE430023FE89 /* LaunchScreen.storyboard */,
+				24BC7E3E2924CE420023FE89 /* AppDelegate.swift */,
+				24BC7E402924CE420023FE89 /* SceneDelegate.swift */,
+			);
+			path = "App Root";
+			sourceTree = "<group>";
+		};
+		24BC7E6F2924D2370023FE89 /* Model Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Entities";
+			sourceTree = "<group>";
+		};
+		24BC7E712924D2960023FE89 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		24BC7E722924D4270023FE89 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				24BC7E422924CE420023FE89 /* CharacterClassListViewController.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,7 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24BC7E432924CE420023FE89 /* ViewController.swift in Sources */,
+				24BC7E432924CE420023FE89 /* CharacterClassListViewController.swift in Sources */,
 				24BC7E3F2924CE420023FE89 /* AppDelegate.swift in Sources */,
 				24BC7E412924CE420023FE89 /* SceneDelegate.swift in Sources */,
 			);
