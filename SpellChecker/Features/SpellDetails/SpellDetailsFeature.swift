@@ -30,8 +30,8 @@ class SpellDetailsFeature {
                 completion(.failure(.requestFailed))
             case .success(let data):
                 do {
-                    let list = try JSONDecoder().decode(Spell.self, from: data)
-                    completion(.success(list))
+                    let spell = try JSONDecoder().decode(Spell.self, from: data)
+                    completion(.success(spell))
                 } catch let error {
                     print(error)
                     completion(.failure(.invalidData))
