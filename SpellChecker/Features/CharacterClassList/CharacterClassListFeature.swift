@@ -8,17 +8,17 @@
 import Foundation
 
 class CharacterClassListFeature {
+    
     enum LoadingError: Error {
         case requestFailed, invalidData
     }
     
-    let api: RemoteAPI
-    let client: HTTPClient
-    let mapper = CharacterClassListMapper()
-    
-    init(api: RemoteAPI, client: HTTPClient) {
+    init(api: RemoteAPI,
+         client: HTTPClient,
+         mapper: CharacterClassListMapper) {
         self.api = api
         self.client = client
+        self.mapper = mapper
     }
     
     typealias LoadResult = Result<[CharacterClassListItem], LoadingError>
@@ -44,6 +44,12 @@ class CharacterClassListFeature {
             }
         }
     }
+    
+    //MARK: - Private
+    
+    private let api: RemoteAPI
+    private let client: HTTPClient
+    private let mapper: CharacterClassListMapper
 }
 
 extension RemoteAPI {

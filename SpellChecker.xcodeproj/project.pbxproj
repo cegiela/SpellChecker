@@ -26,6 +26,7 @@
 		24BC7E8D29254A060023FE89 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E8C29254A060023FE89 /* HTTPClient.swift */; };
 		24BC7E8F29254C580023FE89 /* DefaultHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E8E29254C580023FE89 /* DefaultHTTPClient.swift */; };
 		24BC7E91292558B10023FE89 /* CharacterClassListFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E90292558B10023FE89 /* CharacterClassListFeature.swift */; };
+		24BC7E93292562710023FE89 /* CharacterClassListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E92292562710023FE89 /* CharacterClassListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		24BC7E8C29254A060023FE89 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		24BC7E8E29254C580023FE89 /* DefaultHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultHTTPClient.swift; sourceTree = "<group>"; };
 		24BC7E90292558B10023FE89 /* CharacterClassListFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClassListFeature.swift; sourceTree = "<group>"; };
+		24BC7E92292562710023FE89 /* CharacterClassListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClassListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +204,7 @@
 			children = (
 				24BC7E812924FE820023FE89 /* CharacterClassListMapper.swift */,
 				24BC7E90292558B10023FE89 /* CharacterClassListFeature.swift */,
+				24BC7E92292562710023FE89 /* CharacterClassListViewModel.swift */,
 			);
 			path = CharacterClassList;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				24BC7E8B292511CC0023FE89 /* RemoteAPI.swift in Sources */,
 				24BC7E8F29254C580023FE89 /* DefaultHTTPClient.swift in Sources */,
 				24BC7E3F2924CE420023FE89 /* AppDelegate.swift in Sources */,
+				24BC7E93292562710023FE89 /* CharacterClassListViewModel.swift in Sources */,
 				24BC7E412924CE420023FE89 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

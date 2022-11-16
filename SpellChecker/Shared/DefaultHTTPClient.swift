@@ -8,8 +8,6 @@
 import Foundation
 
 class DefaultHTTPClient: HTTPClient {
-    private let session: URLSession
-    private static let okStatusRange = 200...299
     
     init(session: URLSession = URLSession(configuration: .default)) {
         self.session = session
@@ -33,4 +31,9 @@ class DefaultHTTPClient: HTTPClient {
         }
         task.resume()
     }
+    
+    //MARK: - Private
+    
+    private let session: URLSession
+    private static let okStatusRange = 200...299
 }
