@@ -17,6 +17,9 @@
 		24BC7E622924CE440023FE89 /* SpellCheckerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E612924CE440023FE89 /* SpellCheckerUITestsLaunchTests.swift */; };
 		24BC7E752924D6960023FE89 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E742924D6960023FE89 /* Coordinator.swift */; };
 		24BC7E772924D7670023FE89 /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E762924D7670023FE89 /* RootCoordinator.swift */; };
+		24BC7E7B2924E0120023FE89 /* Spell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E782924E0120023FE89 /* Spell.swift */; };
+		24BC7E7C2924E0120023FE89 /* CharacterClassListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E792924E0120023FE89 /* CharacterClassListItem.swift */; };
+		24BC7E7D2924E0120023FE89 /* SpellListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E7A2924E0120023FE89 /* SpellListItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		24BC7E612924CE440023FE89 /* SpellCheckerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellCheckerUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		24BC7E742924D6960023FE89 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		24BC7E762924D7670023FE89 /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		24BC7E782924E0120023FE89 /* Spell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spell.swift; sourceTree = "<group>"; };
+		24BC7E792924E0120023FE89 /* CharacterClassListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterClassListItem.swift; sourceTree = "<group>"; };
+		24BC7E7A2924E0120023FE89 /* SpellListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpellListItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,9 @@
 		24BC7E6F2924D2370023FE89 /* Model Entities */ = {
 			isa = PBXGroup;
 			children = (
+				24BC7E792924E0120023FE89 /* CharacterClassListItem.swift */,
+				24BC7E782924E0120023FE89 /* Spell.swift */,
+				24BC7E7A2924E0120023FE89 /* SpellListItem.swift */,
 			);
 			path = "Model Entities";
 			sourceTree = "<group>";
@@ -150,6 +159,9 @@
 		24BC7E712924D2960023FE89 /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				24BC7E7E2924E1610023FE89 /* CharacterClassList */,
+				24BC7E7F2924E16D0023FE89 /* SpellList */,
+				24BC7E802924E1910023FE89 /* SpellDetails */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -168,6 +180,27 @@
 				24BC7E742924D6960023FE89 /* Coordinator.swift */,
 			);
 			path = Shared;
+			sourceTree = "<group>";
+		};
+		24BC7E7E2924E1610023FE89 /* CharacterClassList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CharacterClassList;
+			sourceTree = "<group>";
+		};
+		24BC7E7F2924E16D0023FE89 /* SpellList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SpellList;
+			sourceTree = "<group>";
+		};
+		24BC7E802924E1910023FE89 /* SpellDetails */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SpellDetails;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,8 +333,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24BC7E7C2924E0120023FE89 /* CharacterClassListItem.swift in Sources */,
+				24BC7E7D2924E0120023FE89 /* SpellListItem.swift in Sources */,
 				24BC7E752924D6960023FE89 /* Coordinator.swift in Sources */,
 				24BC7E432924CE420023FE89 /* CharacterClassListViewController.swift in Sources */,
+				24BC7E7B2924E0120023FE89 /* Spell.swift in Sources */,
 				24BC7E772924D7670023FE89 /* RootCoordinator.swift in Sources */,
 				24BC7E3F2924CE420023FE89 /* AppDelegate.swift in Sources */,
 				24BC7E412924CE420023FE89 /* SceneDelegate.swift in Sources */,
