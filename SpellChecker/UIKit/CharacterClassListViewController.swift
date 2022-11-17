@@ -121,28 +121,3 @@ fileprivate class CharacterClassListDataSource: NSObject, UICollectionViewDataSo
         collectionView.register(BasicCell.self, forCellWithReuseIdentifier: cellIdentifier)
     }
 }
-
-class BasicCell: UICollectionViewCell {
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        configureSubviews()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func showContent(text: String) {
-        mainLabel.text = text
-    }
-    
-    //MARK: - Private
-    
-    private let mainLabel = UILabel()
-
-    private func configureSubviews() {
-        contentView.addSubview(mainLabel)
-        mainLabel.pinSelfToSuperview(padding: 20.0)
-    }
-}

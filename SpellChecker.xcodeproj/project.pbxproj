@@ -33,6 +33,7 @@
 		24BC7E9B292597B70023FE89 /* SpellDetailsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E9A292597B70023FE89 /* SpellDetailsFeature.swift */; };
 		24BC7E9D29259B010023FE89 /* SpellDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E9C29259B010023FE89 /* SpellDetailsViewModel.swift */; };
 		24BC7E9F292646630023FE89 /* UIKit Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E9E292646630023FE89 /* UIKit Helpers.swift */; };
+		24BC7EA1292653770023FE89 /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7EA0292653770023FE89 /* BasicCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		24BC7E9A292597B70023FE89 /* SpellDetailsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellDetailsFeature.swift; sourceTree = "<group>"; };
 		24BC7E9C29259B010023FE89 /* SpellDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellDetailsViewModel.swift; sourceTree = "<group>"; };
 		24BC7E9E292646630023FE89 /* UIKit Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit Helpers.swift"; sourceTree = "<group>"; };
+		24BC7EA0292653770023FE89 /* BasicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 		24BC7E722924D4270023FE89 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				24BC7EA0292653770023FE89 /* BasicCell.swift */,
 				24BC7E9E292646630023FE89 /* UIKit Helpers.swift */,
 				24BC7E422924CE420023FE89 /* CharacterClassListViewController.swift */,
 			);
@@ -388,6 +391,7 @@
 				24BC7E97292586930023FE89 /* SpellListViewModel.swift in Sources */,
 				24BC7E752924D6960023FE89 /* Coordinator.swift in Sources */,
 				24BC7E9B292597B70023FE89 /* SpellDetailsFeature.swift in Sources */,
+				24BC7EA1292653770023FE89 /* BasicCell.swift in Sources */,
 				24BC7E9D29259B010023FE89 /* SpellDetailsViewModel.swift in Sources */,
 				24BC7E91292558B10023FE89 /* CharacterClassListFeature.swift in Sources */,
 				24BC7E432924CE420023FE89 /* CharacterClassListViewController.swift in Sources */,
