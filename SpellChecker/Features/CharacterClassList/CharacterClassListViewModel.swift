@@ -21,14 +21,26 @@ class CharacterClassListViewModel {
         case failed(message: String)
     }
     
-    let viewTitle = "D&D Character Classes"
     private(set) var state: Observed<State>
-
+    
+    var contentItems: [ContentItem]? {
+        if case .ready(let items) = state.value {
+            return items
+        }
+        return nil
+    }
+    
+    let viewTitle = "D&D Character Classes"
+    
     init(feature: CharacterClassListFeature) {
         self.feature = feature
         self.state = Observed(State.loading)
         
         loadList()
+    }
+    
+    func observeState(observer: @escaping (State) -> Void) {
+        state.observe(observer)
     }
     
     //MARK: - Private

@@ -32,6 +32,7 @@
 		24BC7E99292592070023FE89 /* Observed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E98292592070023FE89 /* Observed.swift */; };
 		24BC7E9B292597B70023FE89 /* SpellDetailsFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E9A292597B70023FE89 /* SpellDetailsFeature.swift */; };
 		24BC7E9D29259B010023FE89 /* SpellDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E9C29259B010023FE89 /* SpellDetailsViewModel.swift */; };
+		24BC7E9F292646630023FE89 /* UIKit Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E9E292646630023FE89 /* UIKit Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		24BC7E98292592070023FE89 /* Observed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observed.swift; sourceTree = "<group>"; };
 		24BC7E9A292597B70023FE89 /* SpellDetailsFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellDetailsFeature.swift; sourceTree = "<group>"; };
 		24BC7E9C29259B010023FE89 /* SpellDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellDetailsViewModel.swift; sourceTree = "<group>"; };
+		24BC7E9E292646630023FE89 /* UIKit Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit Helpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 		24BC7E722924D4270023FE89 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				24BC7E9E292646630023FE89 /* UIKit Helpers.swift */,
 				24BC7E422924CE420023FE89 /* CharacterClassListViewController.swift */,
 			);
 			path = UIKit;
@@ -390,6 +393,7 @@
 				24BC7E432924CE420023FE89 /* CharacterClassListViewController.swift in Sources */,
 				24BC7E862925083C0023FE89 /* SpellListMapper.swift in Sources */,
 				24BC7E7B2924E0120023FE89 /* Spell.swift in Sources */,
+				24BC7E9F292646630023FE89 /* UIKit Helpers.swift in Sources */,
 				24BC7E95292583BB0023FE89 /* SpellListFeature.swift in Sources */,
 				24BC7E772924D7670023FE89 /* RootCoordinator.swift in Sources */,
 				24BC7E8B292511CC0023FE89 /* RemoteAPI.swift in Sources */,
