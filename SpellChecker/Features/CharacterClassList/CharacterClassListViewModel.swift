@@ -30,7 +30,7 @@ class CharacterClassListViewModel {
         return nil
     }
     
-    let viewTitle = "D&D Character Classes"
+    let viewTitle = "D&D Classes"
     
     init(feature: CharacterClassListFeature) {
         self.feature = feature

@@ -20,15 +20,17 @@ class DefaultHTTPClient: HTTPClient {
             if let response = response as? HTTPURLResponse {
                 if !DefaultHTTPClient.okStatusRange.contains(response.statusCode) {
                     completion(.failure(.responseCode(statusCode: response.statusCode)))
+                    return
                 }
-            } else if let error {
-                completion(.failure(.responseUndefined(error: error)))
-            } else if let data {
+            }
+            
+            if let data {
                 completion(.success(data))
             } else {
-                completion(.failure(.responseUndefined(error: nil)))
+                completion(.failure(.responseUndefined(error: error)))
             }
         }
+        
         task.resume()
     }
     
