@@ -21,19 +21,26 @@ class SpellListViewModel {
         case failed(message: String)
     }
     
+    private(set) var state: Observed<State>
+    
+    var contentItems: [ContentItem]? {
+        if case .ready(let items) = state.value {
+            return items
+        }
+        return nil
+    }
+    
     var viewTitle: String {
-        if let className = characterClassItem?.name {
+        if let className = characterClass?.name {
             return "\(className) Spells"
         } else {
             return "Spell List"
         }
     }
     
-    private(set) var state: Observed<State>
-    
-    var characterClassItem: CharacterClassListViewModel.ContentItem? {
+    var characterClass: CharacterClassListViewModel.ContentItem? {
         didSet {
-            if let identifier = characterClassItem?.identifier {
+            if let identifier = characterClass?.identifier {
                 loadList(characterClassIdentifier: identifier)
             } else {
                 state.value = .empty(message: "Nothing to show yet")
@@ -44,6 +51,10 @@ class SpellListViewModel {
     init(feature: SpellListFeature) {
         self.feature = feature
         self.state = Observed(State.loading)
+    }
+    
+    func observeState(observer: @escaping (State) -> Void) {
+        state.observe(observer)
     }
     
     //MARK: - Private

@@ -34,6 +34,7 @@
 		24BC7E9D29259B010023FE89 /* SpellDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E9C29259B010023FE89 /* SpellDetailsViewModel.swift */; };
 		24BC7E9F292646630023FE89 /* UIKit Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E9E292646630023FE89 /* UIKit Helpers.swift */; };
 		24BC7EA1292653770023FE89 /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7EA0292653770023FE89 /* BasicCell.swift */; };
+		24BC7EA3292655270023FE89 /* SpellListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7EA2292655270023FE89 /* SpellListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		24BC7E9C29259B010023FE89 /* SpellDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellDetailsViewModel.swift; sourceTree = "<group>"; };
 		24BC7E9E292646630023FE89 /* UIKit Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit Helpers.swift"; sourceTree = "<group>"; };
 		24BC7EA0292653770023FE89 /* BasicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
+		24BC7EA2292655270023FE89 /* SpellListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 				24BC7EA0292653770023FE89 /* BasicCell.swift */,
 				24BC7E9E292646630023FE89 /* UIKit Helpers.swift */,
 				24BC7E422924CE420023FE89 /* CharacterClassListViewController.swift */,
+				24BC7EA2292655270023FE89 /* SpellListViewController.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				24BC7E8F29254C580023FE89 /* DefaultHTTPClient.swift in Sources */,
 				24BC7E3F2924CE420023FE89 /* AppDelegate.swift in Sources */,
 				24BC7E93292562710023FE89 /* CharacterClassListViewModel.swift in Sources */,
+				24BC7EA3292655270023FE89 /* SpellListViewController.swift in Sources */,
 				24BC7E412924CE420023FE89 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
