@@ -3,4 +3,54 @@
    uuid = "471D9AB8-6024-4666-9156-8B3C4D844F69"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8430CAA4-70BE-4752-8D9C-19D868D4050C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SpellChecker/Features/SpellDetails/SpellDetailsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "loadDetails(spellIdentifier:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8430CAA4-70BE-4752-8D9C-19D868D4050C - de3fa8bd12bba649"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Result&lt;SpellChecker.Spell, SpellChecker.SpellDetailsFeature.LoadError&gt;) -&gt; () in SpellChecker.SpellDetailsViewModel.loadDetails(spellIdentifier: Swift.String) -&gt; ()"
+                  moduleName = "SpellChecker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matcegiela/Code/_INTERVIEW_TEST_PROJECTS/SpellChecker/SpellChecker/Features/SpellDetails/SpellDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "69"
+                  endingLineNumber = "69"
+                  offsetFromSymbolStart = "172">
+               </Location>
+               <Location
+                  uuid = "8430CAA4-70BE-4752-8D9C-19D868D4050C - b51550dddd07802b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor () -&gt; () in closure #1 (Swift.Result&lt;SpellChecker.Spell, SpellChecker.SpellDetailsFeature.LoadError&gt;) -&gt; () in SpellChecker.SpellDetailsViewModel.loadDetails(spellIdentifier: Swift.String) -&gt; ()"
+                  moduleName = "SpellChecker"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/matcegiela/Code/_INTERVIEW_TEST_PROJECTS/SpellChecker/SpellChecker/Features/SpellDetails/SpellDetailsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "36">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

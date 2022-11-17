@@ -44,8 +44,16 @@ class RootCoordinator {
         return SpellListViewController(viewModel: viewModel, navigationDelegate: self)
     }
     
-    private func spellDetailsViewController(spell: SpellListViewModel.ContentItem) -> UIViewController {
-        return UIHostingController(rootView: SpellDetailsView())
+    private func spellDetailsViewController(spellItem: SpellListViewModel.ContentItem) -> UIViewController {
+        let api = RemoteAPI.production
+        let httpClient = DefaultHTTPClient()
+        
+        let feature = SpellDetailsFeature(api: api, client: httpClient)
+        let viewModel = SpellDetailsViewModel(feature: feature)
+        viewModel.spellListItem = spellItem
+        
+        let adapter = SpellDetailsViewModelAdapter(viewModel: viewModel)
+        return UIHostingController(rootView: SpellDetailsView(adapter: adapter))
     }
 }
 
@@ -58,7 +66,7 @@ extension RootCoordinator: CharacterClassListNavigationDelegate {
 
 extension RootCoordinator: SpellListNavigationDelegate {
     func didSelectItem(_ item: SpellListViewModel.ContentItem) {
-        let viewController = spellDetailsViewController(spell: item)
+        let viewController = spellDetailsViewController(spellItem: item)
         navigationController.pushViewController(viewController, animated: true)
     }
 }

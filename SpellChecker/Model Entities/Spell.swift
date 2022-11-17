@@ -18,9 +18,9 @@ struct Spell: Codable {
     let duration: String
     let concentration: Bool
     let castingTime: String
-    let attackType: String
+    let attackType: String?
     let level: Int
-    let damage: Damage
+    let damage: Damage?
     let school: School
     let classes, subclasses: [CharacterClassListItem]
     let url: String

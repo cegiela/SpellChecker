@@ -47,6 +47,18 @@ class SpellDetailsViewModel {
         self.state = Observed(State.loading)
     }
     
+    var spell: ContentItem? {
+        if case .ready(let item) = state.value {
+            return item
+        } else {
+            return nil
+        }
+    }
+    
+    func observeState(observer: @escaping (State) -> Void) {
+        state.observe(observer)
+    }
+    
     //MARK: - Private
     
     private let feature: SpellDetailsFeature
