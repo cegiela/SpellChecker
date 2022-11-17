@@ -55,6 +55,10 @@ struct DamageType: Codable {
 }
 
 struct MockSpell {
+    var spell: Spell {
+        let data = jsonString.data(using: .utf8)!
+        return try! JSONDecoder().decode(Spell.self, from: data)
+    }
     let name = "Produce Flame"
     let jsonString = """
 {
