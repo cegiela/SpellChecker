@@ -13,6 +13,20 @@ class SpellDetailsViewModel {
         let name: String
         let identifier: String
         let description: String
+        
+        let range: String
+        let components: String
+        let duration: String
+        let castingTime: String
+        let school: String
+        let level: String
+        
+        let ritual: String
+        let concentration: String
+        
+        let attackType: String?
+        let damageType: String?
+        let damageAtCharacterLevel: [String: String]?
     }
     
     enum State {
@@ -87,6 +101,23 @@ class SpellDetailsViewModel {
     
     private func mapContentForSpell(_ spell: Spell) -> ContentItem {
         let description = spell.descriptions.joined(separator: "\n\n")
-        return ContentItem(name: spell.name, identifier: spell.index, description: description)
+        let components = spell.components.joined(separator: ", ")
+        let ritual = spell.ritual ? "Yes" : "No"
+        let concentration = spell.concentration ? "Yes" : "No"
+
+        return ContentItem(name: spell.name,
+                           identifier: spell.index,
+                           description: description,
+                           range: spell.range,
+                           components: components,
+                           duration: spell.duration,
+                           castingTime: spell.castingTime,
+                           school: spell.school.name,
+                           level: String(spell.level),
+                           ritual: ritual,
+                           concentration: concentration,
+                           attackType: nil,
+                           damageType: nil,
+                           damageAtCharacterLevel: nil)
     }
 }
