@@ -35,6 +35,7 @@
 		24BC7E9F292646630023FE89 /* UIKit Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7E9E292646630023FE89 /* UIKit Helpers.swift */; };
 		24BC7EA1292653770023FE89 /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7EA0292653770023FE89 /* BasicCell.swift */; };
 		24BC7EA3292655270023FE89 /* SpellListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7EA2292655270023FE89 /* SpellListViewController.swift */; };
+		24BC7EA629265E2E0023FE89 /* SpellDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24BC7EA529265E2E0023FE89 /* SpellDetailsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		24BC7E9E292646630023FE89 /* UIKit Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit Helpers.swift"; sourceTree = "<group>"; };
 		24BC7EA0292653770023FE89 /* BasicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
 		24BC7EA2292655270023FE89 /* SpellListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellListViewController.swift; sourceTree = "<group>"; };
+		24BC7EA529265E2E0023FE89 /* SpellDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellDetailsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 				24BC7E8929250EE60023FE89 /* DataSources */,
 				24BC7E712924D2960023FE89 /* Features */,
 				24BC7E722924D4270023FE89 /* UIKit */,
+				24BC7EA429265C5D0023FE89 /* SwiftUI */,
 				24BC7E472924CE430023FE89 /* Assets.xcassets */,
 				24BC7E4C2924CE430023FE89 /* Info.plist */,
 			);
@@ -254,6 +257,14 @@
 				24BC7E8A292511CC0023FE89 /* RemoteAPI.swift */,
 			);
 			path = DataSources;
+			sourceTree = "<group>";
+		};
+		24BC7EA429265C5D0023FE89 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				24BC7EA529265E2E0023FE89 /* SpellDetailsView.swift */,
+			);
+			path = SwiftUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,6 +415,7 @@
 				24BC7E95292583BB0023FE89 /* SpellListFeature.swift in Sources */,
 				24BC7E772924D7670023FE89 /* RootCoordinator.swift in Sources */,
 				24BC7E8B292511CC0023FE89 /* RemoteAPI.swift in Sources */,
+				24BC7EA629265E2E0023FE89 /* SpellDetailsView.swift in Sources */,
 				24BC7E8F29254C580023FE89 /* DefaultHTTPClient.swift in Sources */,
 				24BC7E3F2924CE420023FE89 /* AppDelegate.swift in Sources */,
 				24BC7E93292562710023FE89 /* CharacterClassListViewModel.swift in Sources */,

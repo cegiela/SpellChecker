@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class RootCoordinator {
     lazy var navigationController: UINavigationController = {
@@ -42,17 +43,22 @@ class RootCoordinator {
         
         return SpellListViewController(viewModel: viewModel, navigationDelegate: self)
     }
+    
+    private func spellDetailsViewController(spell: SpellListViewModel.ContentItem) -> UIViewController {
+        return UIHostingController(rootView: SpellDetailsView())
+    }
 }
 
 extension RootCoordinator: CharacterClassListNavigationDelegate {
     func didSelectItem(_ item: CharacterClassListViewModel.ContentItem) {
-        var viewController = spellListViewController(characterClass: item)
+        let viewController = spellListViewController(characterClass: item)
         navigationController.pushViewController(viewController, animated: true)
     }
 }
 
 extension RootCoordinator: SpellListNavigationDelegate {
     func didSelectItem(_ item: SpellListViewModel.ContentItem) {
-        //
+        let viewController = spellDetailsViewController(spell: item)
+        navigationController.pushViewController(viewController, animated: true)
     }
 }
