@@ -53,6 +53,8 @@ class CharacterClassListViewController: UIViewController, UICollectionViewDelega
         return collectionView
     }()
     
+    private var statusLabel = UILabel()
+    
     private func configureView() {
         navigationItem.title = viewModel.viewTitle
         navigationItem.largeTitleDisplayMode = .automatic
@@ -62,6 +64,13 @@ class CharacterClassListViewController: UIViewController, UICollectionViewDelega
         collectionView.pinSelfToSuperview()
         collectionView.dataSource = dataSource
         collectionView.delegate = self
+        
+        view.addSubview(statusLabel)
+        statusLabel.pinSelfToSuperview()
+        statusLabel.font = UIFont.systemFont(ofSize: 24, weight: .medium)
+        statusLabel.textAlignment = .center
+        statusLabel.backgroundColor = .systemBackground
+        statusLabel.isHidden = true
     }
     
     private func observeViewModel() {
@@ -71,15 +80,21 @@ class CharacterClassListViewController: UIViewController, UICollectionViewDelega
     }
     
     private func displayState(_ state: CharacterClassListViewModel.State) {
+        statusLabel.isHidden = false
+
         switch state {
         case .loading:
+            statusLabel.text = "Loading..."
             break // Show spinner
         case .ready(items: let items):
             dataSource.updateItems(items: items)
+            statusLabel.isHidden = true
+            break
         case .empty(message: let message):
-            print(message)
+            statusLabel.text = message
+            break
         case .failed(message: let message):
-            print(message)
+            statusLabel.text = message
         }
     }
 }

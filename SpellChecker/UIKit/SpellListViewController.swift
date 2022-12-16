@@ -53,6 +53,8 @@ class SpellListViewController: UIViewController, UICollectionViewDelegate {
         return collectionView
     }()
     
+    private var statusLabel = UILabel()
+    
     private func configureView() {
         navigationItem.title = viewModel.viewTitle
         navigationItem.largeTitleDisplayMode = .automatic
@@ -62,6 +64,13 @@ class SpellListViewController: UIViewController, UICollectionViewDelegate {
         collectionView.pinSelfToSuperview()
         collectionView.dataSource = dataSource
         collectionView.delegate = self
+        
+        view.addSubview(statusLabel)
+        statusLabel.pinSelfToSuperview()
+        statusLabel.font = UIFont.systemFont(ofSize: 24, weight: .medium)
+        statusLabel.textAlignment = .center
+        statusLabel.backgroundColor = .systemBackground
+        statusLabel.isHidden = true
     }
     
     private func observeViewModel() {
@@ -71,15 +80,21 @@ class SpellListViewController: UIViewController, UICollectionViewDelegate {
     }
     
     private func displayState(_ state: SpellListViewModel.State) {
+        statusLabel.isHidden = false
+
         switch state {
         case .loading:
+            statusLabel.text = "Loading..."
             break // Show spinner
         case .ready(items: let items):
             dataSource.updateItems(items: items)
+            statusLabel.isHidden = true
+            break
         case .empty(message: let message):
-            print(message)
+            statusLabel.text = message
+            break
         case .failed(message: let message):
-            print(message)
+            statusLabel.text = message
         }
     }
 }
@@ -115,7 +130,7 @@ fileprivate class SpellListDataSource: NSObject, UICollectionViewDataSource {
 
     private let cellIdentifier = "SpellListCell"
     private var collectionView: UICollectionView
-    
+
     private func configureCollectionView() {
         collectionView.dataSource = self
         collectionView.register(BasicCell.self, forCellWithReuseIdentifier: cellIdentifier)
