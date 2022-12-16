@@ -62,15 +62,18 @@ class CharacterClassListViewModel {
     }
     
     private func updateWithError(_ error: CharacterClassListFeature.LoadError) {
-        state.value = .failed(message: "Something went wrong, content failed to load")
+        state.value = .failed(message: defaultContentErrorMessage)
     }
     
     private func updateWithItems(_ items: [CharacterClassListItem]) {
         if items.isEmpty {
-            state.value = .empty(message: "There is no content available right now")
+            state.value = .empty(message: defaultContentEmptyMessage)
         } else {
             let contentItems = items.map { ContentItem(name: $0.name, identifier: $0.index)}
             state.value = .ready(items: contentItems)
         }
     }
+    
+    private var defaultContentEmptyMessage = "There is no content available here"
+    private var defaultContentErrorMessage = "Something went wrong, content failed to load"
 }

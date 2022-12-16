@@ -20,9 +20,9 @@ class SpellListViewModel {
         case empty(message: String)
         case failed(message: String)
     }
-    
+        
     private(set) var state: Observed<State>
-    
+
     var contentItems: [ContentItem]? {
         if case .ready(let items) = state.value {
             return items
@@ -43,7 +43,7 @@ class SpellListViewModel {
             if let identifier = characterClass?.identifier {
                 loadList(characterClassIdentifier: identifier)
             } else {
-                state.value = .empty(message: "Nothing to show yet")
+                state.value = .empty(message: defaultContentEmptyMessage)
             }
         }
     }
@@ -76,15 +76,18 @@ class SpellListViewModel {
     }
     
     private func updateWithError(_ error: SpellListFeature.LoadError) {
-        state.value = .failed(message: "Something went wrong, content failed to load")
+        state.value = .failed(message: defaultContentErrorMessage)
     }
     
     private func updateWithItems(_ items: [SpellListItem]) {
         if items.isEmpty {
-            state.value = .empty(message: "There is no content available right now")
+            state.value = .empty(message: defaultContentEmptyMessage)
         } else {
             let contentItems = items.map { ContentItem(name: $0.name, identifier: $0.index)}
             state.value = .ready(items: contentItems)
         }
     }
+    
+    private var defaultContentEmptyMessage = "There is no content available here"
+    private var defaultContentErrorMessage = "Something went wrong, content failed to load"
 }

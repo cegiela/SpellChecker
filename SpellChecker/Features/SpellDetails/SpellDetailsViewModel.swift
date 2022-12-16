@@ -51,7 +51,7 @@ class SpellDetailsViewModel {
             if let identifier = spellListItem?.identifier {
                 loadDetails(spellIdentifier: identifier)
             } else {
-                state.value = .empty(message: "Nothing to show yet")
+                state.value = .empty(message: defaultContentEmptyMessage)
             }
         }
     }
@@ -92,11 +92,15 @@ class SpellDetailsViewModel {
     }
     
     private func updateWithError(_ error: SpellDetailsFeature.LoadError) {
-        state.value = .failed(message: "Something went wrong, content failed to load")
+        state.value = .failed(message: defaultContentErrorMessage)
     }
     
-    private func updateWithItem(_ item: Spell) {
-        state.value = .ready(item: mapContentForSpell(item))
+    private func updateWithItem(_ item: Spell?) {
+        if let item {
+            state.value = .ready(item: mapContentForSpell(item))
+        } else {
+            state.value = .empty(message: defaultContentEmptyMessage)
+        }
     }
     
     private func mapContentForSpell(_ spell: Spell) -> ContentItem {
@@ -120,4 +124,7 @@ class SpellDetailsViewModel {
                            damageType: nil,
                            damageAtCharacterLevel: nil)
     }
+    
+    private var defaultContentEmptyMessage = "There is no content available here"
+    private var defaultContentErrorMessage = "Something went wrong, content failed to load"
 }
