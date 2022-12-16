@@ -7,6 +7,12 @@
 
 import Foundation
 
+protocol CharacterClassListModel {
+    typealias LoadResult = Result<[CharacterClassListItem], CharacterClassListFeature.LoadError>
+    
+    func loadList(completion: @escaping (LoadResult) -> Void)
+}
+
 class CharacterClassListViewModel {
     
     struct ContentItem {
@@ -32,8 +38,8 @@ class CharacterClassListViewModel {
     
     let viewTitle = "D&D Classes"
     
-    init(feature: CharacterClassListFeature) {
-        self.feature = feature
+    init(model: CharacterClassListModel) {
+        self.model = model
         self.state = Observed(State.loading)
         
         loadList()
@@ -45,10 +51,10 @@ class CharacterClassListViewModel {
     
     //MARK: - Private
     
-    private let feature: CharacterClassListFeature
+    private let model: CharacterClassListModel
     
     private func loadList() {
-        feature.loadList { [weak self] result in
+        model.loadList { [weak self] result in
             
             DispatchQueue.main.async {
                 switch result {

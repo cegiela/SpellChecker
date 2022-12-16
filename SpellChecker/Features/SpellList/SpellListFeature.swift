@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SpellListFeature {
+class SpellListFeature: SpellListModel {
     
     enum LoadError: Error {
         case requestFailed, invalidData
@@ -20,9 +20,7 @@ class SpellListFeature {
         self.client = client
         self.mapper = mapper
     }
-    
-    typealias LoadResult = Result<[SpellListItem], LoadError>
-    
+        
     func loadList(characterClassIdentifier: String, completion: @escaping (LoadResult) -> Void) {
         let url = api.getSpellListURL(characterClassIdentifier: characterClassIdentifier)
         

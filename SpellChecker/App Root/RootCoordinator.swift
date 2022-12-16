@@ -27,7 +27,7 @@ class RootCoordinator {
         let dataMapper = CharacterClassListMapper()
         
         let feature = CharacterClassListFeature(api: api, client: httpClient, mapper: dataMapper)
-        let viewModel = CharacterClassListViewModel(feature: feature)
+        let viewModel = CharacterClassListViewModel(model: feature)
         
         return CharacterClassListViewController(viewModel: viewModel, navigationDelegate: self)
     }
@@ -38,7 +38,7 @@ class RootCoordinator {
         let dataMapper = SpellListMapper()
         
         let feature = SpellListFeature(api: api, client: httpClient, mapper: dataMapper)
-        let viewModel = SpellListViewModel(feature: feature)
+        let viewModel = SpellListViewModel(model: feature)
         viewModel.characterClass = characterClass
         
         return SpellListViewController(viewModel: viewModel, navigationDelegate: self)
@@ -49,7 +49,7 @@ class RootCoordinator {
         let httpClient = DefaultHTTPClient()
         
         let feature = SpellDetailsFeature(api: api, client: httpClient)
-        let viewModel = SpellDetailsViewModel(feature: feature)
+        let viewModel = SpellDetailsViewModel(model: feature)
         viewModel.spellListItem = spellItem
         
         let adapter = SpellDetailsViewModelAdapter(viewModel: viewModel)

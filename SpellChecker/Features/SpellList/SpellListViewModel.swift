@@ -7,6 +7,12 @@
 
 import Foundation
 
+protocol SpellListModel {
+    typealias LoadResult = Result<[SpellListItem], SpellListFeature.LoadError>
+
+    func loadList(characterClassIdentifier: String, completion: @escaping (LoadResult) -> Void)
+}
+
 class SpellListViewModel {
     
     struct ContentItem {
@@ -48,8 +54,8 @@ class SpellListViewModel {
         }
     }
     
-    init(feature: SpellListFeature) {
-        self.feature = feature
+    init(model: SpellListModel) {
+        self.model = model
         self.state = Observed(State.loading)
     }
     
@@ -59,10 +65,10 @@ class SpellListViewModel {
     
     //MARK: - Private
     
-    private let feature: SpellListFeature
+    private let model: SpellListModel
     
     private func loadList(characterClassIdentifier: String) {
-        feature.loadList(characterClassIdentifier: characterClassIdentifier) { [weak self] result in
+        model.loadList(characterClassIdentifier: characterClassIdentifier) { [weak self] result in
             
             DispatchQueue.main.async {
                 switch result {

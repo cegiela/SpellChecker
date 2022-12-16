@@ -7,6 +7,12 @@
 
 import Foundation
 
+protocol SpellDetailsModel {
+    typealias LoadResult = Result<Spell, SpellDetailsFeature.LoadError>
+    
+    func loadSpell(spellIdentifier: String, completion: @escaping (LoadResult) -> Void)
+}
+
 class SpellDetailsViewModel {
     
     struct ContentItem {
@@ -56,8 +62,8 @@ class SpellDetailsViewModel {
         }
     }
     
-    init(feature: SpellDetailsFeature) {
-        self.feature = feature
+    init(model: SpellDetailsModel) {
+        self.model = model
         self.state = Observed(State.loading)
     }
     
@@ -75,10 +81,10 @@ class SpellDetailsViewModel {
     
     //MARK: - Private
     
-    private let feature: SpellDetailsFeature
+    private let model: SpellDetailsModel
     
     private func loadDetails(spellIdentifier: String) {
-        feature.loadSpell(spellIdentifier: spellIdentifier) { [weak self] result in
+        model.loadSpell(spellIdentifier: spellIdentifier) { [weak self] result in
             
             DispatchQueue.main.async {
                 switch result {

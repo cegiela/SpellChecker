@@ -43,4 +43,8 @@ final class SpellCheckerTests: XCTestCase {
         let result = try JSONDecoder().decode(Spell.self, from: data)
         XCTAssertEqual(result.name, mockData.name)
     }
+    
+    func test_characterClassListViewModel_deliversCorrectContent() throws {
+//        let mockFeature = CharacterClassListFeatureMock
+    }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-class SpellDetailsFeature {
+class SpellDetailsFeature: SpellDetailsModel {
     
     enum LoadError: Error {
         case requestFailed, invalidData
@@ -17,9 +17,7 @@ class SpellDetailsFeature {
         self.api = api
         self.client = client
     }
-    
-    typealias LoadResult = Result<Spell, LoadError>
-    
+        
     func loadSpell(spellIdentifier: String, completion: @escaping (LoadResult) -> Void) {
         let url = api.getSpellDetailsURL(spellIdentifier: spellIdentifier)
         
